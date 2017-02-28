@@ -13,4 +13,4 @@ if __name__ == "__main__":
             res.append(min(cubes[k]))
 
     r = min(res)
-    print(r , " ", r**3)
+    print(r, " ", r**3)
