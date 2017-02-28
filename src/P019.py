@@ -23,22 +23,20 @@ tm_fd = 0
 
 c = 0  # keep track of all matching cases
 
-month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-days=[31,28,31,30,31,30,31,31,30,31,30,31]
+month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-for y in range(1901,2001):
-    for m in range(0,12):
-        d=0
-        if (m == 2) and (y%4 == 0) :
+for y in range(1901, 2001):
+    for m in range(0, 12):
+        d = 0
+        if (m == 2) and (y % 4 == 0):
             d = 29
         else:
-            d=days[m-1]
-        tm_fd = (lm_fd + d % 7) %7
-        if tm_fd == 0 :
+            d = days[m - 1]
+        tm_fd = (lm_fd + d % 7) % 7
+        if tm_fd == 0:
             c = c + 1
         #print( y , " " , month[m],"  ", tm_fd)
         lm_fd = tm_fd
 
 print(c)
-            
-

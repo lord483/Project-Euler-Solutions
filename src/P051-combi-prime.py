@@ -18,6 +18,7 @@ from utils import prime
 
 maxi = 999999
 
+
 def hasThreeRepeating(n):
     '''
     you don't have to check the primes with two or four recurring digits. 
@@ -28,14 +29,13 @@ def hasThreeRepeating(n):
     numberList.sort()
     s = ""
     for i in numberList:
-        s+=str(i)
+        s += str(i)
 
     for c in s:
         if (s.rfind(c) - s.find(c)) == 2:
             return True
 
     return False
-
 
 
 def main():
@@ -55,7 +55,7 @@ def main():
         intList = set([int(i) for i in s])
         for i in intList:
             foundCount = 1
-            pl=[]
+            pl = []
             for j in intSet:
                 if (i != j):
                     newInt = int(s.replace(str(i), str(j)))
@@ -65,7 +65,7 @@ def main():
                         pl.append(newInt)
                         #print(p," ",newInt)
             if (foundCount >= 7):
-                print(s , foundCount, pl)
+                print(s, foundCount, pl)
                 if foundCount > 7:
                     found = True
                     break
@@ -76,5 +76,3 @@ def main():
 if __name__ == '__main__':
     main()
     print("Progam completed")
-
-

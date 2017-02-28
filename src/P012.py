@@ -25,52 +25,51 @@ What is the value of the first triangle number to have over five hundred divisor
 #from math import pow
 
 #a = pow(2,500) - 1
-#a=1
-a=7000
-s = int(a * (a+1) / 2)
-print " Starting ", a , " ",s
+# a=1
+a = 7000
+s = int(a * (a + 1) / 2)
+print " Starting ", a, " ", s
 
 
 def find_divisors(x):
     x = int(x)
-    #print " in f d .. for " , x
+    # print " in f d .. for " , x
     #x1 = x
     n = 1
     #l = int(sqrt(x))+1
     i = 1
-    while(x>1):
-        i=i+1
-        c=0
-        while( x%i == 0):
-            c=c+1
-            x=int(x/i)
-        if c>0:
-            #print x1 , " ", i ," " , c
-            n = n * (c+1)
+    while(x > 1):
+        i = i + 1
+        c = 0
+        while(x % i == 0):
+            c = c + 1
+            x = int(x / i)
+        if c > 0:
+            # print x1 , " ", i ," " , c
+            n = n * (c + 1)
     return n
-        
 
 
 # print "starting " , " a= " , a, " , s= ", s ," ,num div =", find_divisors(s)
 
 while(True):
-    n1 , n2 = 1,1
-    a=a+1
-    
-    if a % 2 == 0 :
-        n1 = find_divisors(a/2)
-        n2 = find_divisors(a+1)
+    n1, n2 = 1, 1
+    a = a + 1
+
+    if a % 2 == 0:
+        n1 = find_divisors(a / 2)
+        n2 = find_divisors(a + 1)
     else:
         n1 = find_divisors(a)
-        n2 = find_divisors((a+1)/2)
+        n2 = find_divisors((a + 1) / 2)
 
-    n = n1*n2
-    
-    if (n > 500) :
-        print "Found ......... " ,a , " " , n , " , Triange Number =  " , a*(a+1)/2
+    n = n1 * n2
+
+    if (n > 500):
+        print "Found ......... ", a, " ", n, " , Triange Number =  ", a * (a + 1) / 2
         break
-    if  (a%500 == 0):
-        print a , " " , n , " , Triange Number =  " , a*(a+1)/2
+    if (a % 500 == 0):
+        print a, " ", n, " , Triange Number =  ", a * (a + 1) / 2
 
 
 '''

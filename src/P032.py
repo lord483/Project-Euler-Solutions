@@ -10,16 +10,17 @@ Find the sum of all products whose multiplicand/multiplier/product identity can 
 
 HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.  '''
 
+
 def is_pand(a):
     s = str(a)
-    l=len(s)
+    l = len(s)
     if l == 1:
         return True
     if '0' in s:
         return False
-    
-    for i in range(0,l):
-        if (s[i] in s[i+1:]) and (s[i] != ' '):
+
+    for i in range(0, l):
+        if (s[i] in s[i + 1:]) and (s[i] != ' '):
             return False
     return True
 
@@ -30,26 +31,23 @@ while(a != 0):
     print(is_pand(a))
     a=int(input("num = ")) '''
 
-num_list =[]
+num_list = []
 
-for i in range(2,100000):
+for i in range(2, 100000):
     if is_pand(i):
-        for j in range(2,100000):
-            p=i*j
+        for j in range(2, 100000):
+            p = i * j
             l1 = len(str(i))
             l2 = len(str(j))
             l3 = len(str(p))
-            l = l1+l2+l3
+            l = l1 + l2 + l3
             if l > 9:
                 break
             if l == 9:
-                if is_pand(str(i)+str(j)+str(p)):
+                if is_pand(str(i) + str(j) + str(p)):
                     if p not in num_list:
                         num_list.append(p)
-            
+
 print("Total nums =", len(num_list))
 print("list: ", num_list)
 print("sum = ", sum(num_list))
-            
-
-    

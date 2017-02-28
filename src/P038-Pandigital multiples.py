@@ -15,16 +15,17 @@ What is the largest 1 to 9 pandigital 9-digit number that can be formed as the c
 
 maxp = 0
 
+
 def is_pand(s):
-    #s=str(a)
-    if len(s) == 1 :
-         return True
+    # s=str(a)
+    if len(s) == 1:
+        return True
     if '0' in s:
         return False
-    for i in range(len(s)-1):
-        if s[i] in s[i+1:]:
+    for i in range(len(s) - 1):
+        if s[i] in s[i + 1:]:
             return False
-        
+
     return True
 
 '''
@@ -37,20 +38,17 @@ while(a!=0):
     a=int(s)  '''
 
 for i in range(9999):
-    s=str(i)
+    s = str(i)
     f = is_pand(s)
     j = 1
     while(f):
         if len(s) == 9:
-            print(i," ",j," ",s)
-            maxp =max(maxp,int(s))
+            print(i, " ", j, " ", s)
+            maxp = max(maxp, int(s))
             break
-        j= j+1
+        j = j + 1
         n = i * j
         s = s + str(n)
-        f= is_pand(s)
+        f = is_pand(s)
 
 print("Result = ", maxp)
-        
-
-    

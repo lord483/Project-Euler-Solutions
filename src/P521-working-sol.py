@@ -11,7 +11,7 @@ def min_factor_sum(N):
     10 ** 14: 157589263416765879793706013
     """
     def f(n):
-        return n * (n + 1) // 2 - 1
+        return (n * (n + 1) // 2) - 1
 
     v = int(N ** 0.5)
     #print("v :", v)
@@ -19,11 +19,10 @@ def min_factor_sum(N):
     s_sum = [f(i) for i in range(v + 1)]
     l_cnt = [N // i - 1 if i else 0 for i in range(v + 1)]
     l_sum = [f(N // i) if i else 0 for i in range(v + 1)]
-    
 
     ret = 0
     for p in range(2, v + 1):
-        print("in primary loop .. P = ",p)
+        print("in primary loop .. P = ", p)
         if s_cnt[p] == s_cnt[p - 1]:
             continue
         p_cnt = s_cnt[p - 1]
@@ -45,7 +44,7 @@ def min_factor_sum(N):
                 l_sum[i] -= (s_sum[t] - p_sum) * p
 
         for i in range(v, q - 1, -1):
-            print("   #in the third loop. i= ",i)
+            print("   #in the third loop. i= ", i)
             t = i // p
             s_cnt[i] -= s_cnt[t] - p_cnt
             s_sum[i] -= (s_sum[t] - p_sum) * p
@@ -54,5 +53,5 @@ def min_factor_sum(N):
 
     return l_sum[1] + ret
 
-print(min_factor_sum(10 * 2))
+print(min_factor_sum(10 ** 2))
 # print(min_factor_sum(10 ** 12))

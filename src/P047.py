@@ -18,8 +18,9 @@ Find the first four consecutive integers to have four distinct prime factors. Wh
 
 from math import sqrt
 
-primes =[2,3]
-facts=[0,1,1,1]
+primes = [2, 3]
+facts = [0, 1, 1, 1]
+
 
 def is_prime(a):
     l = int(sqrt(a))
@@ -27,7 +28,7 @@ def is_prime(a):
     for i in primes:
         if i > l:
             break
-        elif a%i == 0:
+        elif a % i == 0:
             isPrime = False
             break
     return isPrime
@@ -37,32 +38,32 @@ def num_facts(a):
     n = 0
     i = -1
     l = int(sqrt(a))
-    while(a>1):
-        i=i+1
-        p=primes[i]
+    while(a > 1):
+        i = i + 1
+        p = primes[i]
         if p > l:
-            n = n +1
+            n = n + 1
             a = 1
-        elif a%p ==0:
-            n=n+1
-            while(a%p == 0):
-                a = a //p
+        elif a % p == 0:
+            n = n + 1
+            while(a % p == 0):
+                a = a // p
     return n
 
 
 def main():
-    i=3
+    i = 3
     four = False
     while(not four):
-        i = i+1
-        p=0
-        if i%2 ==1:
+        i = i + 1
+        p = 0
+        if i % 2 == 1:
             if is_prime(i):
                 primes.append(i)
                 facts.append(1)
-                p=1
-                
-        if p==0:        
+                p = 1
+
+        if p == 0:
             facts.append(num_facts(i))
 
         if facts[-1] == 4:
@@ -71,13 +72,12 @@ def main():
                     if facts[-4] == 4:
                         four = True
                         print("found !!! ", i)
-        
-        facts[:1]=[]
+
+        facts[:1] = []
         '''
         if i%10000 == 1:
             l  = len(facts)
             print("now : " , i , "   ", len(facts))  '''
-            
+
 if __name__ == "__main__":
     main()
-    

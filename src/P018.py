@@ -16,41 +16,41 @@
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 '''
 
-f = open("P018.txt",'r')
-s=0
+f = open("P018.txt", 'r')
+s = 0
 lines = 0
-p=[]
+p = []
 
 for l in f:
-    lines = lines +1
+    lines = lines + 1
     nums = []
     nums = l.split(" ")
-    nums =[int(i) for i in nums]
+    nums = [int(i) for i in nums]
     print nums
     p.append(nums)
-    
-p2=[]
+
+p2 = []
 p2.append(p[0])
 
-for i in range(1,lines):
+for i in range(1, lines):
     n = p[i]
-    m=[]
+    m = []
     l = len(n)
-    
-    for j in range(0,l):
-        
-        pmax=0
-        if j==0 :
-            pmax = p2[i-1][0]
-        elif j == l-1 :
-            pmax = p2[i-1][-1]
-        elif p2[i-1][j-1] > p2[i-1][j] :
-            pmax = p2[i-1][j-1]
+
+    for j in range(0, l):
+
+        pmax = 0
+        if j == 0:
+            pmax = p2[i - 1][0]
+        elif j == l - 1:
+            pmax = p2[i - 1][-1]
+        elif p2[i - 1][j - 1] > p2[i - 1][j]:
+            pmax = p2[i - 1][j - 1]
         else:
-            pmax = p2[i-1][j]
-        
-        m.append(n[j]+pmax)
-        
+            pmax = p2[i - 1][j]
+
+        m.append(n[j] + pmax)
+
     p2.append(m)
 
 
@@ -61,10 +61,6 @@ print " ===== "
 print p2[-1]
 p2[-1].sort()
 print p2[-1]
-    
-    
 
-print " Result =" ,s , ", number of lines =", lines
-    
-    
 
+print " Result =", s, ", number of lines =", lines

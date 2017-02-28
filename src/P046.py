@@ -18,7 +18,8 @@ What is the smallest odd composite that cannot be written as the sum of a prime 
 
 from math import sqrt
 
-primes =[2,3,5,7]
+primes = [2, 3, 5, 7]
+
 
 def is_prime(a):
     l = int(sqrt(a))
@@ -26,45 +27,44 @@ def is_prime(a):
     for i in primes:
         if i > l:
             break
-        elif a%i == 0:
+        elif a % i == 0:
             isPrime = False
             break
     return isPrime
 
 
 def is_gold(a):
-    
+
     g = False
-    
+
     for i in primes:
-        if (i > a-2) or g:
+        if (i > a - 2) or g:
             break
-        
-        for j in range(1,a):
-            n = i+(2*j*j)
+
+        for j in range(1, a):
+            n = i + (2 * j * j)
             if n > a:
                 break
             elif n == a:
                 g = True
                 break
-        
+
     return g
+
 
 def main():
 
-    i=7
+    i = 7
     gold = True
     while(gold):
-        i = i+2
+        i = i + 2
         if is_prime(i):
             primes.append(i)
         else:
             gold = is_gold(i)
             if not gold:
                 print(i)
-        
 
 
 if __name__ == "__main__":
     main()
-    

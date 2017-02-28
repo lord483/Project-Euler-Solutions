@@ -14,27 +14,28 @@ the greatest number that cannot be expressed as the sum of two abundant numbers 
 Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 '''
 
-ab=[]
-sum_list=[]
+ab = []
+sum_list = []
 res = 0
 
 from math import sqrt
 
+
 def abundant(a):
-    
+
     s = 1
-    lim=int(sqrt(a))+1
-        
-    for i in range(2,lim):
-        if a%i == 0:
-            b = int(a/i)
-            if b != i :
+    lim = int(sqrt(a)) + 1
+
+    for i in range(2, lim):
+        if a % i == 0:
+            b = int(a / i)
+            if b != i:
                 s = s + i + b
             else:
                 s = s + i
         if s > a:
             break
-                
+
     if s > a:
         return True
     else:
@@ -43,25 +44,25 @@ def abundant(a):
 #limit = 8000
 limit = 28124
 
-for i in range(1,limit):
+for i in range(1, limit):
     if abundant(i):
         ab.append(i)
 
     nab = 0
     for j in ab:
-        if j>(i/2):
+        if j > (i / 2):
             break
-        if i-j in ab:
+        if i - j in ab:
             nab = 1
             break
-        
-    if nab ==0:
-        res=res+i
-        
-    if i%1000 == 0:
-        print("i =",i , " , Res=",res)
 
-print("Total ab found = ", len(ab)," first = ",ab[0],"  last = ",ab[-1])
+    if nab == 0:
+        res = res + i
+
+    if i % 1000 == 0:
+        print("i =", i, " , Res=", res)
+
+print("Total ab found = ", len(ab), " first = ", ab[0], "  last = ", ab[-1])
 
 
 '''
@@ -80,10 +81,5 @@ for i in range(1,limit):
     if i%1000 == 0:
         print("i =",i , " , Res=",res)
         '''
-        
-print("result =" , res)
 
-        
-
-
-
+print("result =", res)

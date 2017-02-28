@@ -16,12 +16,11 @@ def isPalindrome(a):
         num = a * -1
     else:
         num = a
-        
-    
+
     if num >= 0 and num <= 9:
         return True
 
-    while num > 0 :
+    while num > 0:
         r = num % 10
         digits.append(r)
         num = int((num - r) / 10)
@@ -29,9 +28,9 @@ def isPalindrome(a):
     #print(a, " digits : " , digits, " . length :" , len(digits))
 
     p = 1
-    
-    for i in range(1,len(digits)):
-        if digits[i-1] != digits[i * -1]:
+
+    for i in range(1, len(digits)):
+        if digits[i - 1] != digits[i * -1]:
             p = 0
             break
 
@@ -41,7 +40,6 @@ def isPalindrome(a):
         return True
 
 
-    
 '''
 print(33,isPalindrome(33))
 a=343
@@ -55,20 +53,15 @@ print(a,isPalindrome(a)) '''
 
 # Main Logic
 
-p=[0]
-for i in range(101,1000):
-    for j in range(100,i):
-        a= i*j
+p = [0]
+for i in range(101, 1000):
+    for j in range(100, i):
+        a = i * j
         if isPalindrome(a):
             if p[0] < a:
-                p.insert(0,a)
+                p.insert(0, a)
             else:
                 p.append(a)
 
 
 print(p)
-
-        
-    
-    
-

@@ -26,27 +26,29 @@ Surprisingly, there are palindromic numbers that are themselves Lychrel numbers;
 How many Lychrel numbers are there below ten-thousand?
 '''
 
+
 def is_pall(a):
-    if a<9:
+    if a < 9:
         return True
     s = str(a)
-    return  s == s[::-1]
+    return s == s[::-1]
+
 
 def main():
-    count = 0   
-    for i in range(1,10001):
+    count = 0
+    for i in range(1, 10001):
         a = i
         lych = True
         for j in range(50):
-            r=int(str(a)[::-1])    # reverse it
+            r = int(str(a)[::-1])    # reverse it
             a = a + r
             if is_pall(a):
                 lych = False
                 break
         if lych:
-            count = count+1
+            count = count + 1
 
     print("Result = ", count)
-              
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

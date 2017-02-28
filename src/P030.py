@@ -12,20 +12,20 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 
 Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.  '''
 
+
 def sum_digit(a):
-    s=0
+    s = 0
     for c in str(a):
         i = int(c)
-        s = s + pow(i,5)
+        s = s + pow(i, 5)
     return s
 
 res = 0
 num_list = []
 
-for i in range(10,999999):
+for i in range(10, 999999):
     if i == sum_digit(i):
         num_list.append(i)
 
 print(sum(num_list))
 print("list of numbers = ", num_list)
-

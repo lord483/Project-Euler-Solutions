@@ -29,13 +29,13 @@ The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
 What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid? '''
 
-a=[]
+a = []
 
-f = open('P011.txt','r')
+f = open('P011.txt', 'r')
 for line in f:
-    temp1=list(line.split(" "))
-    temp2=[int(i) for i in temp1]
-    #print(temp2)
+    temp1 = list(line.split(" "))
+    temp2 = [int(i) for i in temp1]
+    # print(temp2)
     a.append(temp2)
 f.close()
 print("file is read")
@@ -45,36 +45,34 @@ max_p = 0
 # go right
 
 for line in a:
-    for i in range(0,17):
-        p = line[i] * line[i+1] * line[i+2] * line[i+3]
+    for i in range(0, 17):
+        p = line[i] * line[i + 1] * line[i + 2] * line[i + 3]
         if p > max_p:
             max_p = p
-print("scanned every line . So far max_p is:",max_p)
+print("scanned every line . So far max_p is:", max_p)
 
-#go down
+# go down
 
-for j in range(0,20):
-    for i in range(0,17):
-        p=a[i][j] * a[i+1][j] * a[i+2][j] * a[i+3][j]
+for j in range(0, 20):
+    for i in range(0, 17):
+        p = a[i][j] * a[i + 1][j] * a[i + 2][j] * a[i + 3][j]
         if p > max_p:
             max_p = p
 
-print("scanned every column . So far max_p is:",max_p)
+print("scanned every column . So far max_p is:", max_p)
 
-#Go Forward diagnal
-for i in range(0,17):
-    for j in range(0,17):
-        p=a[i][j] * a[i+1][j+1] * a[i+2][j+2] * a[i+3][j+3]
+# Go Forward diagnal
+for i in range(0, 17):
+    for j in range(0, 17):
+        p = a[i][j] * a[i + 1][j + 1] * a[i + 2][j + 2] * a[i + 3][j + 3]
         if p > max_p:
             max_p = p
-print("scanned forward diagonally . So far max_p is:",max_p)
+print("scanned forward diagonally . So far max_p is:", max_p)
 
-#Go backward diagnal
-for i in range(0,17):
-    for j in range(3,20):
-        p=a[i][j] * a[i+1][j-1] * a[i+2][j-2] * a[i+3][j-3]
+# Go backward diagnal
+for i in range(0, 17):
+    for j in range(3, 20):
+        p = a[i][j] * a[i + 1][j - 1] * a[i + 2][j - 2] * a[i + 3][j - 3]
         if p > max_p:
             max_p = p
-print("scanned backward diagonally . So far max_p is:",max_p)
-
-
+print("scanned backward diagonally . So far max_p is:", max_p)

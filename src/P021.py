@@ -13,23 +13,24 @@ Evaluate the sum of all the amicable numbers under 10000.
 
 '''
 
+
 def d(a):
-    s=0
-    for i in range(1,a):
-        if a%i == 0:
-            s=s+i
+    s = 0
+    for i in range(1, a):
+        if a % i == 0:
+            s = s + i
     return(s)
 
-#test 1
-print("220 -" , d(220))
-print("284 -" , d(284))
+# test 1
+print("220 -", d(220))
+print("284 -", d(284))
 
 r = 0
 
-for i in range(2,10000):
-    d1=d(i)
+for i in range(2, 10000):
+    d1 = d(i)
     if (d1 != i) and (i == d(d1)):
         print(i)
         r = r + i
 
-print("result = " , r)
+print("result = ", r)

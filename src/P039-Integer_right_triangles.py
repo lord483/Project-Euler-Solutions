@@ -17,20 +17,18 @@ If both a and b are odd, c will be even and P will be even.
 If one is even and the other is odd, c will be odd and P will again be even.
 Therefore, only even values of P need to be checked.  '''
 
-for i in range(6,1001,2):
-    l = int(i/3)
-    s=0
-    for a in range(2,l):
+for i in range(6, 1001, 2):
+    l = int(i / 3)
+    s = 0
+    for a in range(2, l):
         l2 = i - a - l - 1
-        l3 = int(i/2)
-        lb = min(l2,l3)
-        for b in range(a+1,lb):
-            c = i - (a+b)
-            if (a*a + b*b) == c*c:
-                s=s+1
+        l3 = int(i / 2)
+        lb = min(l2, l3)
+        for b in range(a + 1, lb):
+            c = i - (a + b)
+            if (a * a + b * b) == c * c:
+                s = s + 1
     if s > maxs:
-        maxs = s 
+        maxs = s
         maxn = i
-        print(i," " ,s)
-                
-            
+        print(i, " ", s)

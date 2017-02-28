@@ -14,33 +14,29 @@ Find the next triangle number that is also pentagonal and hexagonal.
 
 from math import sqrt
 count = 0
-i,t,p,h = 0,0,0,0
+i, t, p, h = 0, 0, 0, 0
 
 while(count < 3):
     i = i + 1
-    t = (i*(i+1)) // 2
+    t = (i * (i + 1)) // 2
 
     # check penta
     p = 0
-    s=sqrt(24*t +1)
+    s = sqrt(24 * t + 1)
     if s == int(s):
-        x  = (1+s)/6
+        x = (1 + s) / 6
         if x == int(x):
             p = int(x)
-    h=0       
+    h = 0
     if p > 0:
         # the number is penta , now try hexa
-        s2=sqrt(8*t +1)
+        s2 = sqrt(8 * t + 1)
         if s2 == int(s2):
-            x  = (1+s2)/4
+            x = (1 + s2) / 4
             if x == int(x):
                 count = count + 1
                 h = int(x)
-                print(" i = ", i, " tri = ", t, " p =", p, " h =",h)
+                print(" i = ", i, " tri = ", t, " p =", p, " h =", h)
 
-    if i %1000 == 0 or i == 285:
-        print(i,' ',t)
-
-        
-        
-        
+    if i % 1000 == 0 or i == 285:
+        print(i, ' ', t)

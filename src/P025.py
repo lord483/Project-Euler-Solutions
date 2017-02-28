@@ -24,16 +24,16 @@ What is the first term in the Fibonacci sequence to contain 1000 digits? '''
 
 f1 = 1
 f2 = 1
-n=2
+n = 2
 
 while(True):
-    n=n+1
-    fn = f1+f2
-    f1=f2
-    f2=fn
+    n = n + 1
+    fn = f1 + f2
+    f1 = f2
+    f2 = fn
 
-    #print(fn)
-    if fn > pow(10,999):
-        print("term=",n)
-        print("Number=",fn)
+    # print(fn)
+    if fn > pow(10, 999):
+        print("term=", n)
+        print("Number=", fn)
         break

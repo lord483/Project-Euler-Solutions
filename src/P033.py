@@ -1,29 +1,29 @@
-def check_nt(a,b):
+def check_nt(a, b):
     # check non triviality , a always < b
     if a > b:
         return False
 
-    #find common digit
-    f=0
-    c=''
+    # find common digit
+    f = 0
+    c = ''
 
     sa = str(a)
     sb = str(b)
 
     for i in sa:
         if i in sb:
-            f=1
-            c=i
-            
+            f = 1
+            c = i
+
     if f == 0:
         # Nothing in common
         return False
-    
+
     if c == '0':
-        #it's trivial
+        # it's trivial
         #print("It's Trivial")
         return False
-        
+
     na = 0  # new a
     for i in sa:
         if i != c:
@@ -33,9 +33,9 @@ def check_nt(a,b):
     for i in sb:
         if i != c:
             nb = int(i)
-    if (nb == 0 ) or (sb ==0):
+    if (nb == 0) or (sb == 0):
         return False
-    if (na/nb) == (a/b):
+    if (na / nb) == (a / b):
         return True
     else:
         return False
@@ -48,12 +48,11 @@ print(check_nt(30,50)) '''
 
 mi = 1
 mj = 1
-for i in range(11,100):
-    for j in range(i+1,100):
-        if check_nt(i,j):
-            print(i , j)
+for i in range(11, 100):
+    for j in range(i + 1, 100):
+        if check_nt(i, j):
+            print(i, j)
             mi = mi * i
-            mj = mj*j
+            mj = mj * j
 
-print("final",mi , "/",mj)
-    
+print("final", mi, "/", mj)

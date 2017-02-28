@@ -23,12 +23,13 @@ for the quadratic expression that produces the maximum number of primes for cons
 
 from math import sqrt
 
+
 def is_prime(a):
     if a < 0:
         return False
-    lim=int(sqrt(a))+1
-    for i in range(2,lim):
-        if a%i == 0:
+    lim = int(sqrt(a)) + 1
+    for i in range(2, lim):
+        if a % i == 0:
             return False
     return True
 
@@ -36,8 +37,9 @@ c = 41
 b = 1
 a = 1
 
-def eval_quad(a,b,c,x):
-    return a*x*x + b*x + c
+
+def eval_quad(a, b, c, x):
+    return a * x * x + b * x + c
 
 '''
 for i in range(0,50):
@@ -46,15 +48,15 @@ for i in range(0,50):
 
 max_seq = 0
 max_set = []
-for b in range(-999,999):
-    for c in range(-999,999):
+for b in range(-999, 999):
+    for c in range(-999, 999):
         n = 0
-        while(is_prime(eval_quad(a,b,c,n))):
-            n=n+1
+        while(is_prime(eval_quad(a, b, c, n))):
+            n = n + 1
         if n > max_seq:
             max_seq = n
-            max_set = [a , b ,c ]
+            max_set = [a, b, c]
 
-print(max_seq , max_set)
-result=max_set[1]*max_set[2]
+print(max_seq, max_set)
+result = max_set[1] * max_set[2]
 print(result)

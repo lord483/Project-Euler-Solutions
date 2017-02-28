@@ -14,17 +14,16 @@ n = 50
 
 if __name__ == "__main__":
     res = 0
-    for c in range(2,n+1,2):
-        c2 = c*c
-        for a in range(1,c):
-            a2 = 2*(a*a)
-            r = max(c-a+1 , a)
-            for b in range(r,c+1):
-                # now check for int median                
-                s = a2 + (2*b*b) - c2
-                m = sqrt(s)/2
+    for c in range(2, n + 1, 2):
+        c2 = c * c
+        for a in range(1, c):
+            a2 = 2 * (a * a)
+            r = max(c - a + 1, a)
+            for b in range(r, c + 1):
+                # now check for int median
+                s = a2 + (2 * b * b) - c2
+                m = sqrt(s) / 2
                 if m == int(m):
-                    print(a, b , c , m)
+                    print(a, b, c, m)
                     res = res + 1
     print(res)
-                    

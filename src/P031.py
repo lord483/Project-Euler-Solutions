@@ -11,39 +11,36 @@ How many different ways can £2 be made using any number of coins?
 '''
 
 count = 0
-a1,a2,a3,a4,a5,a6,a7,a8=0,0,0,0,0,0,0,0
+a1, a2, a3, a4, a5, a6, a7, a8 = 0, 0, 0, 0, 0, 0, 0, 0
 
-for e1 in range(0,201):
-    for e2 in range(0,101):
-        a2 = e1 + 2*e2
-        if  a2 > 200:
+for e1 in range(0, 201):
+    for e2 in range(0, 101):
+        a2 = e1 + 2 * e2
+        if a2 > 200:
             break
-        for e3 in range(0,41):
-            a3 = a2 + 5*e3
-            if a3 >200:
+        for e3 in range(0, 41):
+            a3 = a2 + 5 * e3
+            if a3 > 200:
                 break
-            for e4 in range(0,21):
-                a4 = a3 + e4*10
-                if a4>200:
+            for e4 in range(0, 21):
+                a4 = a3 + e4 * 10
+                if a4 > 200:
                     break
-                for e5 in range(0,11):
-                    a5 = a4 + e5*20
+                for e5 in range(0, 11):
+                    a5 = a4 + e5 * 20
                     if a5 > 200:
                         break
-                    for e6 in range(0,5):
-                        a6 = a5 + e6*50
+                    for e6 in range(0, 5):
+                        a6 = a5 + e6 * 50
                         if a6 > 200:
                             break
-                        for e7 in range(0,3):
-                            a7 = a6 + e7*100
+                        for e7 in range(0, 3):
+                            a7 = a6 + e7 * 100
                             if a7 > 200:
                                 break
-                            for e8 in [0,1]:
-                                a8 = a7 + e8*200
+                            for e8 in [0, 1]:
+                                a8 = a7 + e8 * 200
                                 if a8 == 200:
-                                    count = count +1
+                                    count = count + 1
 
 print("result = ", count)
-                    
-                            
-                    

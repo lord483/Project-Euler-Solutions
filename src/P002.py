@@ -12,12 +12,11 @@ sum_even = 0
 
 LIMIT = 4000000
 
-while f2 < LIMIT :
-    if f2% 2 == 0 :
+while f2 < LIMIT:
+    if f2 % 2 == 0:
         sum_even += f2
-    new = f1+f2
+    new = f1 + f2
     f1 = f2
     f2 = new
 
 print(sum_even)
-

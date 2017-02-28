@@ -19,13 +19,14 @@ Give your answer modulo 987654321.
 
 BASE = 987654321
 
-def f(n,k):
+
+def f(n, k):
     res = 10
-    
+
     return res
 
 if __name__ == '__main__':
     n = int(input("Enter the  max number of stones (n) : "))
     k = int(input("Enter the  number of piles (k) : "))
-    res = f(n,k)
+    res = f(n, k)
     print("Result : ", res)

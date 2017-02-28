@@ -10,24 +10,24 @@ How many circular primes are there below one million?  '''
 from math import sqrt
 
 LIMIT = 1000000
-primes=[2,3,5,7]
+primes = [2, 3, 5, 7]
 loop = 0
-sl=0
+sl = 0
 
-for i in range(9,LIMIT,2):
-    loop = loop +1
-    l = int(sqrt(i))+1
+for i in range(9, LIMIT, 2):
+    loop = loop + 1
+    l = int(sqrt(i)) + 1
     for p in primes:
-        sl=sl+1
-        if i%p == 0:
+        sl = sl + 1
+        if i % p == 0:
             break
-        if p >l:
+        if p > l:
             primes.append(i)
             break
 
-#print("Loop =", loop , " ",sl)       
-#print(primes)
-print("all Primes computed , count = " ,len(primes))
+#print("Loop =", loop , " ",sl)
+# print(primes)
+print("all Primes computed , count = ", len(primes))
 
 '''
 def permutation_list(p):
@@ -41,8 +41,3 @@ def permutation_list(p):
 # find those weird sets
 for p in prime:
     pl = permutation_list(p)  '''
-    
-    
-    
-
-

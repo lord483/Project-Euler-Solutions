@@ -13,7 +13,8 @@ What 12-digit number do you form by concatenating the three terms in this sequen
 '''
 
 from math import sqrt
-primes = [2,3]
+primes = [2, 3]
+
 
 def is_prime(a):
     result = True
@@ -21,23 +22,24 @@ def is_prime(a):
     for p in primes:
         if p > l:
             break
-        elif a%p == 0:
+        elif a % p == 0:
             result = False
             break
     return result
 
+
 def main():
 
-    for i in range(5,10000,2):
+    for i in range(5, 10000, 2):
         if is_prime(i):
             primes.append(i)
 
-    primes_f = [ i for i in primes if i > 1000]
-    print("step 1 done : ", len(primes) , " " , len(primes_f))
+    primes_f = [i for i in primes if i > 1000]
+    print("step 1 done : ", len(primes), " ", len(primes_f))
 
     for p1 in primes_f:
-        p2 = p1+3330
-        p3 = p2+3330
+        p2 = p1 + 3330
+        p3 = p2 + 3330
 
         if p2 > 9999 or p3 > 9999:
             pass
@@ -51,7 +53,7 @@ def main():
             p3_list.sort()
 
             if (p1_list == p2_list) and (p2_list == p3_list):
-                print(p1,p2,p3)
+                print(p1, p2, p3)
 
 if __name__ == '__main__':
 

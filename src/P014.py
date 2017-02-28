@@ -17,26 +17,25 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 '''
 
+
 def chain(x):
     c = 1
     n = x
-    while(n>1):
-        c = c+1
-        if n%2 == 0:
-            n = n/2
+    while(n > 1):
+        c = c + 1
+        if n % 2 == 0:
+            n = n / 2
         else:
-            n = 3*n + 1
+            n = 3 * n + 1
     return c
 
 max_len = 0
 max_int = 0
 
-for i in range(1,1000000):
+for i in range(1, 1000000):
     l = chain(i)
-    if l > max_len :
+    if l > max_len:
         max_len = l
         max_int = i
 
-print "max_len = " , max_len ,"  max_int = " , max_int
-    
-        
+print "max_len = ", max_len, "  max_int = ", max_int
