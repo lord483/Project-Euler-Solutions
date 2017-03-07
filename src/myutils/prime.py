@@ -31,26 +31,6 @@ def getPrimes(n):
     return primes
 
 
-def getPrimes2(n):
-    r = n
-    # plist = list(islice(repeat(1), r + 1))
-    plist = array("I", islice(repeat(1), r + 1))
-    plist[0] = 0
-    plist[1] = 0
-
-    lim = int(n**0.5)
-
-    for i in range(2, lim + 1):
-        p = i
-        if plist[i]:
-            sp = i * i
-            while(sp <= r):
-                plist[sp] = 0
-                sp = sp + p
-
-    primes = array("l", (i for i in range(r) if plist[i]))
-    return primes
-
 if __name__ == '__main__':
     n = int(input("Enter a number : "))
     t0 = time()
