@@ -15,10 +15,14 @@ Evaluate the sum of all the amicable numbers under 10000.
 
 
 def d(a):
-    s = 0
-    for i in range(1, a):
+    s = 1
+    l = int(a**0.5)
+    for i in range(2, l + 1):
         if a % i == 0:
-            s = s + i
+            j = a // i
+            s += (i + j)
+            if i == j:
+                s -= j
     return(s)
 
 # test 1
@@ -27,8 +31,11 @@ print("284 -", d(284))
 
 r = 0
 
+N = 10000
+mem = [d(n) for n in range(2, N)]
+
 for i in range(2, 10000):
-    d1 = d(i)
+    d1 = mem[i - 2]
     if (d1 != i) and (i == d(d1)):
         print(i)
         r = r + i
