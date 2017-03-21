@@ -14,17 +14,17 @@
 from decimal import *
 getcontext().prec = 110
 
-squares  = [i*i for i in range(1,11)]
+squares = [i * i for i in range(1, 11)]
 res = 0
 sqrt = Decimal(0.5)
-for i in range(1,101):
+for i in range(1, 101):
     if i in squares:
         continue
     d = Decimal(i)**sqrt
-    dec,fra = str(d).split(".")
+    dec, fra = str(d).split(".")
     r = sum([int(c) for c in dec])
-    r += sum([int(c) for c in fra[:100-len(dec)]])
-    print(i,r)
+    r += sum([int(c) for c in fra[:100 - len(dec)]])
+    print(i, r)
     res += r
 
 print(res)

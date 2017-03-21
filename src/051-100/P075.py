@@ -1,6 +1,7 @@
 from collections import defaultdict
 from numba import *
 
+
 @jit
 def compute_pytho():
     pytho = defaultdict(int)
@@ -10,15 +11,15 @@ def compute_pytho():
 
     print("Limiting search to : ", lim)
 
-    for n in range(1,lim+1):
-        for m in range(n+1,lim+1):
-            a = m*m - n*n
-            b = 2*m*n
-            c = m*m + n*n
+    for n in range(1, lim + 1):
+        for m in range(n + 1, lim + 1):
+            a = m * m - n * n
+            b = 2 * m * n
+            c = m * m + n * n
             # c0 = c
-            a0,b0 = min(a,b), max(a,b)
-            a,b = a0,b0
-            s0 = a+b+c
+            a0, b0 = min(a, b), max(a, b)
+            a, b = a0, b0
+            s0 = a + b + c
             i = 1
             s = s0
             # print(a,b,c)
@@ -30,9 +31,8 @@ def compute_pytho():
                 elif p != a:
                     pytho[s] = -1
                 i += 1
-                s,a = s0*i , a0*i
+                s, a = s0 * i, a0 * i
                 # b,c = b0*i, c0*i
-
 
     return pytho
 

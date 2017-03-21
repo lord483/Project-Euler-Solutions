@@ -22,7 +22,7 @@ lines = 0
 p = []
 
 for l in f:
-    p.append(list(map(int,l.split())))
+    p.append(list(map(int, l.split())))
 
 p2 = []
 p2.append(p[0])
