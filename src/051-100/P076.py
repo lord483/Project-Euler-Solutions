@@ -1,11 +1,13 @@
-from sympy import binomial
+
+def solve(n):
+    mem = [0 for _ in range(n+1)]
+    mem[0] = 1
+    for i in range(1,n):
+        for j in range(i,n+1):
+            mem[j] += mem[j-i]
+
+    return mem[-1]
 
 if __name__ == "__main__":
     n = 100
-
-    res = 1
-    for i in range(2, n):
-        r = binomial(n - 1, i - 1) / i
-        res += r
-
-    print(res)
+    print(solve(n))
