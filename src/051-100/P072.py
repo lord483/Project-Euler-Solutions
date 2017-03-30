@@ -16,9 +16,9 @@
 
 '''
     Solution : It can be seen that the solution is:
-        sum(phi(i)) for i in range(2,1,000,001)
+        sum(phi(i)) for i in range(2, 1000001)
 
-    We can use Euler's formula ad a seive to compute it easily
+    We can use Euler's formula and a seive to compute it easily
 
 '''
 N = 10**6
@@ -26,12 +26,12 @@ N = 10**6
 # arr = np.arange(N+1)
 # print(arr.shape)
 
-arr = [i for i in range(N+1)]
+arr = [i for i in range(N + 1)]
 result = 0
-for i in range(2, N+1):
+for i in range(2, N + 1):
     if arr[i] == i:
-        for j in range(i,N+1,i):
-            arr[j] = (arr[j]//i)*(i-1)
+        for j in range(i, N + 1, i):
+            arr[j] = (arr[j] // i) * (i - 1)
     result += arr[i]
 
 print(result)
