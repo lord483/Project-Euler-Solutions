@@ -3,3 +3,4 @@ P072 - Seive + Euler's formula for Phi  (Euler's totient function)
 P054 - Code
 P077 - Coin Change (count # of partitions)
 P078 - Coin Change, Can also be solved by Euler generating function for partitions !
+P100 - Dia-phantine equation

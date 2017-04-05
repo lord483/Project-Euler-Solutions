@@ -1,16 +1,10 @@
 '''
-    Problem 77 : Prime summations
+    Problem 78 - Coin partitions
 
-    Desc :
-        It is possible to write ten as the sum of primes in exactly five different ways:
+    Let p(n) represent the number of different ways in which n coins can be separated into piles.
+    For example, five coins can be separated into piles in exactly seven different ways, so p(5)=7.
 
-        7 + 3
-        5 + 5
-        5 + 3 + 2
-        3 + 3 + 2 + 2
-        2 + 2 + 2 + 2 + 2
-
-        What is the first value which can be written as the sum of primes in over five thousand different ways?
+    Find the least value of n for which p(n) is divisible by one million.
 '''
 import numpy as np
 from numba import jit
