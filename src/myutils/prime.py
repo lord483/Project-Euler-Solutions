@@ -9,10 +9,11 @@ from time import time
 from numba import jit
 import numpy as np
 
+
 @jit
 def getPrimes(n):
-    q,r = divmod(n,2)
-    r = q+r
+    q, r = divmod(n, 2)
+    r = q + r
     seive = np.ones(r, dtype=bool)
     seive[0] = 0
 
@@ -25,17 +26,18 @@ def getPrimes(n):
             seive[sp:r:p] = False
 
     def_prime = np.asarray([2])
-    seived_primes = np.asarray(np.nonzero(seive)).flatten()*2 + 1
+    seived_primes = np.asarray(np.nonzero(seive)).flatten() * 2 + 1
     primes = np.concatenate((def_prime, seived_primes))
     return primes
 
+
 @jit
 def getPrimes2(n):
-    arr = np.ones(n+1, dtype=bool)
-    arr[0],arr[1] = 0, 0
-    for i in range(2, n+1):
+    arr = np.ones(n + 1, dtype=bool)
+    arr[0], arr[1] = 0, 0
+    for i in range(2, n + 1):
         if arr[i]:
-            arr[i*i:n+1:i]= False
+            arr[i * i:n + 1:i] = False
     return arr.nonzero()[0]
 
 if __name__ == '__main__':

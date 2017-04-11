@@ -22,7 +22,7 @@ def min_factor_sum(N):
 
     ret = 0
     for p in range(2, v + 1):
-        print("in primary loop .. P = ", p)
+        #print("in primary loop .. P = ", p)
         if s_cnt[p] == s_cnt[p - 1]:
             continue
         p_cnt = s_cnt[p - 1]
@@ -33,7 +33,7 @@ def min_factor_sum(N):
 
         end = min(v, N // q)
         for i in range(1, end + 1):
-            print("   in second loop .  i = ", i)
+            #print("   in second loop .  i = ", i)
             d = i * p
             if d <= v:
                 l_cnt[i] -= l_cnt[d] - p_cnt
@@ -44,14 +44,14 @@ def min_factor_sum(N):
                 l_sum[i] -= (s_sum[t] - p_sum) * p
 
         for i in range(v, q - 1, -1):
-            print("   #in the third loop. i= ", i)
+            # print("   #in the third loop. i= ", i)
             t = i // p
             s_cnt[i] -= s_cnt[t] - p_cnt
             s_sum[i] -= (s_sum[t] - p_sum) * p
 
-        print("   after the loop , l_sum :", l_sum, " , ret = ", ret)
+        #print("   after the loop , l_sum :", l_sum, " , ret = ", ret)
 
     return l_sum[1] + ret
 
-print(min_factor_sum(10 ** 2))
-# print(min_factor_sum(10 ** 12))
+#print(min_factor_sum(10 ** 2))
+print(min_factor_sum(10 ** 12))

@@ -2,22 +2,23 @@
     Problem 112 - Bouncy numbers
 '''
 
+
 def is_bouncy(n):
-    l = list(map(int,str(n)))
+    l = list(map(int, str(n)))
 
     increasing = False
     i = 0
-    while (l[i+1] == l[i]):
-        i+=1
-        if i == len(l)-1:
+    while (l[i + 1] == l[i]):
+        i += 1
+        if i == len(l) - 1:
             return False
 
-    if l[i+1] > l[i]:
+    if l[i + 1] > l[i]:
         increasing = True
 
     d0 = l[i]
 
-    for d in l[i+1:]:
+    for d in l[i + 1:]:
         if d == d0:
             continue
         elif d > d0:
@@ -30,7 +31,7 @@ def is_bouncy(n):
 
     return False
 
-if __name__=="__main__":
+if __name__ == "__main__":
     ratio = 0
     cnt = 0
     i = 100
@@ -40,6 +41,6 @@ if __name__=="__main__":
         # print(i,is_bouncy(i))
         if is_bouncy(i):
             cnt += 1
-        ratio = cnt/i
+        ratio = cnt / i
 
-    print(i,cnt)
+    print(i, cnt)
