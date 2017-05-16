@@ -27,11 +27,12 @@ a = 7
 s = int(a * (a + 1) / 2)
 print(" Starting ", a, " ", s)
 
+
 def find_divisors(x):
     x = int(x)
     n = 1
     i = 1
-    while(x>1) and (i*i <= x):
+    while(x > 1) and (i * i <= x):
         i += 1
         c = 0
         while(x % i == 0):
@@ -39,10 +40,10 @@ def find_divisors(x):
             x = x // i
 
         n *= (c + 1)
-			
+
     if x > 1:
-        n = n*2
-		
+        n = n * 2
+
     return n
 
 
@@ -64,5 +65,3 @@ while(True):
         break
     if (a % 1000 == 0):
         print(a, " ", n, " , Triange Number =  ", a * (a + 1) / 2)
-
-
