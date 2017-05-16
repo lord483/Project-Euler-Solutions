@@ -6,31 +6,26 @@ Problem 15
 Lattice paths
 
 
-Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down,
+Starting in the top left corner of a 2ï¿½2 grid, and only being able to move to the right and down,
 there are exactly 6 routes to the bottom right corner.
-How many such routes are there through a 20×20 grid?
+How many such routes are there through a 20ï¿½20 grid?
 '''
+def solve(SIZE):
+    r = [[0 for i in range(SIZE+1)] for j in range(SIZE+1)]
 
-r = []
-for i in range(0, 21):
-    s = []
-    for j in range(0, 21):
-        if i == 20 or j == 20:
-            s.append(1)
-        else:
-            s.append(0)
-    r.append(s)
+    for i in range(SIZE+1):
+        for j in range(SIZE+1):
+            if i == SIZE or j == SIZE:
+                r[i][j] = 1
 
-r[20][20] = 0
-print("Start ")
-for line in r:
-    print(line)
+    r[SIZE][SIZE] = 0
 
-for i in range(19, -1, -1):
-    for j in range(19, -1, -1):
-        r[i][j] = r[i][j + 1] + r[i + 1][j]
+    for i in range(SIZE-1, -1, -1):
+        for j in range(SIZE-1, -1, -1):
+            r[i][j] = r[i][j + 1] + r[i + 1][j]
 
-print("end ")
-for line in r:
-    print(line)
-print(" final result  =", r[0][0])
+    return(r[0][0])
+
+if __name__ == "__main__":
+    SIZE = int(input("Enter the size : "))
+    print(" Answer =", solve(SIZE))

@@ -20,7 +20,7 @@ def down(a):
         return 0
     else:
         r = (x, y - 1)
-        if (x == 20) and (y - 1 == 0):
+        if (x == SIZE) and (y - 1 == 0):
             return 1
         else:
             return nxt(r)
@@ -30,11 +30,11 @@ def right(a):
     x = a[0]
     y = a[1]
     # print "in right " , x , " " , y
-    if x == 20:
+    if x == SIZE:
         return 0
     else:
         r = (x + 1, y)
-        if (x + 1 == 20) and (y == 0):
+        if (x + 1 == SIZE) and (y == 0):
             return 1
         else:
             return nxt(r)
@@ -45,12 +45,14 @@ def nxt(a):
     y = a[1]
     r, d = 0, 0
     # print "in nxt " , x , " " , y
-    if x < 20:
+    if x < SIZE:
         r = right(a)
     if y > 0:
         d = down(a)
     return r + d
 
-s = (0, 20)
+SIZE = int(input("Enter teh size : "))
+s = (0, SIZE)
+
 x = nxt(s)
-print "result ", x
+print("result ", x)

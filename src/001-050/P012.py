@@ -22,35 +22,29 @@ We can see that 28 is the first triangle number to have over five divisors.
 
 What is the value of the first triangle number to have over five hundred divisors?  '''
 
-#from math import pow
 
-#a = pow(2,500) - 1
-# a=1
-a = 7000
+a = 7
 s = int(a * (a + 1) / 2)
-print " Starting ", a, " ", s
-
+print(" Starting ", a, " ", s)
 
 def find_divisors(x):
     x = int(x)
-    # print " in f d .. for " , x
-    #x1 = x
     n = 1
-    #l = int(sqrt(x))+1
     i = 1
-    while(x > 1):
-        i = i + 1
+    while(x>1) and (i*i <= x):
+        i += 1
         c = 0
         while(x % i == 0):
             c = c + 1
-            x = int(x / i)
-        if c > 0:
-            # print x1 , " ", i ," " , c
-            n = n * (c + 1)
+            x = x // i
+
+        n *= (c + 1)
+			
+    if x > 1:
+        n = n*2
+		
     return n
 
-
-# print "starting " , " a= " , a, " , s= ", s ," ,num div =", find_divisors(s)
 
 while(True):
     n1, n2 = 1, 1
@@ -66,21 +60,9 @@ while(True):
     n = n1 * n2
 
     if (n > 500):
-        print "Found ......... ", a, " ", n, " , Triange Number =  ", a * (a + 1) / 2
+        print("Found ......... ", a, " ", n, " , Triange Number =  ", a * (a + 1) / 2)
         break
-    if (a % 500 == 0):
-        print a, " ", n, " , Triange Number =  ", a * (a + 1) / 2
+    if (a % 1000 == 0):
+        print(a, " ", n, " , Triange Number =  ", a * (a + 1) / 2)
 
 
-'''
-while(True):
-    a = a+1
-    s = s + a
-    n = find_divisors(s)
-    print(n)
-    if a % 50 == 0 :
-        print " num = " , a , " , sum = ", s , " , n=", n
-    if n > 500:
-        print " Final Result ::: num = " , a , " , sum = ", s , " , n=", n
-        break
-'''
