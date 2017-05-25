@@ -49,7 +49,7 @@ if __name__ == '__main__':
     print("getPrimes2(31) : ", getPrimes2(31))
     print()
     print("Now testing the getPrimes function for higher powers of 10")
-    for power in range(1, 10):
+    for power in range(1, 9):
         n = 10**power
         t0 = time()
         primes = getPrimes(n)
