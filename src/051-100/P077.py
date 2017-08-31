@@ -42,6 +42,7 @@ def compute_sum_matrix(n, primes):
 
     return arr
 
+
 if __name__ == "__main__":
     n = 100
     primes = getPrimes(n)

@@ -8,6 +8,7 @@ def solve(n):
 
     return mem[-1]
 
+
 if __name__ == "__main__":
     n = 100
     print(solve(n))

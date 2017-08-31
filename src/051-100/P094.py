@@ -23,6 +23,7 @@ def is_area_int(L):
                         sol += p
     return sol
 
+
 if __name__ == "__main__":
     from time import time
     t0 = time()

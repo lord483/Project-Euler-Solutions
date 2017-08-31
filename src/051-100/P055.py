@@ -50,5 +50,6 @@ def main():
 
     print("Result = ", count)
 
+
 if __name__ == "__main__":
     main()

@@ -43,6 +43,7 @@ def solve(n):
 
     return res
 
+
 if __name__ == "__main__":
     t0 = time()
     print(solve(10))

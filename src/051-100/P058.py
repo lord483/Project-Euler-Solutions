@@ -36,6 +36,7 @@ def is_prime(n):
             return True
     return True
 
+
 if __name__ == "__main__":
     limit = 10**7
     t0 = time()

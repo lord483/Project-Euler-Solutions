@@ -14,6 +14,7 @@ def is_right(a, b, c):
             return True
     return False
 
+
 if __name__ == "__main__":
     res = 0
     for x1 in range(51):

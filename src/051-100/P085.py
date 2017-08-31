@@ -13,6 +13,7 @@ def num_of_rects(n, m):
 
     return res
 
+
 if __name__ == "__main__":
     # tests
     print("1x1 : ", num_of_rects(1, 1))

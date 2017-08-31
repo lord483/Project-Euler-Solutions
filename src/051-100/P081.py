@@ -18,6 +18,7 @@ def solve(size, ip):
 
     return res[-1][-1]
 
+
 if __name__ == "__main__":
     ip = []
     first_line = list(map(int, input().strip().split(",")))

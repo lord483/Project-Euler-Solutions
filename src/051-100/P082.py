@@ -23,6 +23,7 @@ def solve(size, ip):
 
     return min(res[i][-1] for i in range(size))
 
+
 if __name__ == "__main__":
     ip = []
     first_line = list(map(int, input().strip().split(",")))

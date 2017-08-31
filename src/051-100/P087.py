@@ -14,6 +14,7 @@ def getPrimes(n):
             arr[i * i:n + 1:i] = False
     return arr.nonzero()[0]
 
+
 if __name__ == "__main__":
     # print(getPrimes(29))
     N = 50 * (10**6)

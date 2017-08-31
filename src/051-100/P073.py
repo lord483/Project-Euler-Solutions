@@ -33,6 +33,7 @@ def phi(n):
 
     return len(r)
 
+
 if __name__ == "__main__":
     N = 12000
     primes = getPrimes(N)

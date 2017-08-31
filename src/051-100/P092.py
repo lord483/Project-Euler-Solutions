@@ -27,6 +27,7 @@ def check(n):
     mem[n] = r
     return r
 
+
 if __name__ == "__main__":
     t0 = time()
     lim = 81 * 7

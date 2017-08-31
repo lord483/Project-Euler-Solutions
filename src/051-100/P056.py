@@ -17,6 +17,7 @@ def sum_digit(a):
         s = s + int(i)
     return s
 
+
 for i in range(2, 100):
     for j in range(2, 100):
         p = i**j

@@ -21,6 +21,7 @@ def solve(D):
         else:
             x1, y1 = x, y
 
+
 if __name__ == "__main__":
     N, R = 0, 0
     for i in range(2, 1001):

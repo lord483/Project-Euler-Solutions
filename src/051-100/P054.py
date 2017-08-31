@@ -140,6 +140,7 @@ def winner(a, b):
 
     return winner
 
+
 if __name__ == "__main__":
     res = 0
     with open("p054_poker.txt") as f:

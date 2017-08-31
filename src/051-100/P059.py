@@ -47,6 +47,7 @@ def check(pt):
 
     return
 
+
 if __name__ == "__main__":
     ip = []
     cnt, cnt_space, cnt_cntrl, cnt_127 = 0, 0, 0, 0

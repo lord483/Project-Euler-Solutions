@@ -8,6 +8,7 @@ def check(a, b, c, d):
 
     return n
 
+
 if __name__ == "__main__":
     cnt = 0
     for a in range(1, 10):

@@ -36,6 +36,7 @@ def compute_pytho():
 
     return pytho
 
+
 if __name__ == "__main__":
     pytho = compute_pytho()
     keys = list(pytho.keys())

@@ -32,6 +32,7 @@ def solve(n, m):
 
     return res
 
+
 if __name__ == "__main__":
     lim = 100000
     print(solve(lim, 10**6))

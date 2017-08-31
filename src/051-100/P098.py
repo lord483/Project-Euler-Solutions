@@ -84,6 +84,7 @@ def transform(word1, word2, n):
 
     return int("".join([str(mapper[c]) for c in word2]))
 
+
 if __name__ == "__main__":
     anagrams = find_anagrams()
     compute_squares()

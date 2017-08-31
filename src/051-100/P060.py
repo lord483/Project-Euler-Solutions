@@ -38,6 +38,7 @@ def checkList(X, y):
             return False
     return True
 
+
 if __name__ == "__main__":
     t0 = time()
 
