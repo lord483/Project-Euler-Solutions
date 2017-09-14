@@ -27,6 +27,7 @@ def getPrimes(n):
     primes = np.concatenate((def_prime, seived_primes))
     return primes
 
+
 if __name__ == "__main__":
     t0 = time()
 
@@ -44,5 +45,5 @@ if __name__ == "__main__":
             else:
                 break
 
-    print("\nFinal Result : " , res)
+    print("\nFinal Result : ", res)
     print("Total time taken : {:.2f} secs".format(time() - t0))
