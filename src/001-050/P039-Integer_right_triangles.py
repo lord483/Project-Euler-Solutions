@@ -9,8 +9,6 @@ For which value of p ≤ 1000, is the number of solutions maximised?    '''
 
 maxs = 0
 maxn = 0
-
-
 '''
 If both a and b are even, c will also be even and P (the perimeter) will be even.
 If both a and b are odd, c will be even and P will be even.

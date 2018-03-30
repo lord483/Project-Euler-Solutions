@@ -25,6 +25,7 @@ def f(n, k):
 
     return res
 
+
 if __name__ == '__main__':
     n = int(input("Enter the  max number of stones (n) : "))
     k = int(input("Enter the  number of piles (k) : "))

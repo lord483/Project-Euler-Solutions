@@ -13,7 +13,6 @@
     How many elements would be contained in the set of reduced proper fractions for d ≤ 1,000,000 ?
 
 '''
-
 '''
     Solution : It can be seen that the solution is:
         sum(phi(i)) for i in range(2, 1000001)

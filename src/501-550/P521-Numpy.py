@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 n = 1000000000000
-m = int(n ** 0.5)
+m = int(n**0.5)
 
 na = np.arange(n + 1)
 
@@ -12,6 +12,7 @@ def isdiv(x, y):
         return y
     else:
         return x
+
 
 vdiv = np.vectorize(isdiv)
 

@@ -16,7 +16,7 @@ from math import sqrt
 count = 0
 i, t, p, h = 0, 0, 0, 0
 
-while(count < 3):
+while (count < 3):
     i = i + 1
     t = (i * (i + 1)) // 2
 

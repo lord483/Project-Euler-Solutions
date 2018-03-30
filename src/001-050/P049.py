@@ -55,6 +55,7 @@ def main():
             if (p1_list == p2_list) and (p2_list == p3_list):
                 print(p1, p2, p3)
 
+
 if __name__ == '__main__':
 
     main()

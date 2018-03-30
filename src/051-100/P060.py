@@ -8,7 +8,7 @@ start = ['3', '7', '109', '673']
 
 @lru_cache(maxsize=2000000)
 def check_prime(x):
-    y = int(x ** 0.5) + 1
+    y = int(x**0.5) + 1
 
     for j in primes:
         if j > y:

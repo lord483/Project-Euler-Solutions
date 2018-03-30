@@ -58,4 +58,5 @@ if __name__ == "__main__":
     print("len(ip) : ", len(ip))
 
     solve(ip)
-    print("cnt,cnt_space,cnt_cntrl,cnt_127 :  ", cnt, cnt_space, cnt_cntrl, cnt_127)
+    print("cnt,cnt_space,cnt_cntrl,cnt_127 :  ", cnt, cnt_space, cnt_cntrl,
+          cnt_127)

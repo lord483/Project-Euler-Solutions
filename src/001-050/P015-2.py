@@ -1,5 +1,4 @@
 # -*- coding: cp1252 -*-
-
 '''
 Problem 15
 
@@ -26,7 +25,8 @@ def solve(SIZE):
         for j in range(SIZE - 1, -1, -1):
             r[i][j] = r[i][j + 1] + r[i + 1][j]
 
-    return(r[0][0])
+    return (r[0][0])
+
 
 if __name__ == "__main__":
     SIZE = int(input("Enter the size : "))

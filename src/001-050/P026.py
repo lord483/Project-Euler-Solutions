@@ -24,7 +24,7 @@ def rec_cyc(a):
     cyc = 0
     rems = [1]
     divided = True
-    while(True):
+    while (True):
         #print(s , dec)
         if s < a:
             dec.append(0)
@@ -54,7 +54,8 @@ def rec_cyc(a):
             else:
                 rems.append(r)
                 s = r * 10
-    return(cyc)
+    return (cyc)
+
 
 max_res = 0
 max_int = 0

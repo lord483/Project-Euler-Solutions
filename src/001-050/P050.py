@@ -52,7 +52,7 @@ def main():
             max_l = sl
             sax_s = s
         else:
-            while(sl > max_l):
+            while (sl > max_l):
                 sub[:1] = []
                 sl = len(sub)
                 s = sum(sub)

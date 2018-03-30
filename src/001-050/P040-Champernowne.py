@@ -1,11 +1,10 @@
 s = ''
 i = 1
-while(True):
+while (True):
     s = s + str(i)
     i = i + 1
     if len(s) > 1000000:
         break
-
 
 print(i)
 

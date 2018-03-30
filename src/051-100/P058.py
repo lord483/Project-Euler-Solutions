@@ -19,7 +19,7 @@ def getPrimes(n):
 
         if plist[i]:
             sp = 2 * i * (i + 1)
-            while(sp <= r):
+            while (sp <= r):
                 plist[sp] = 0
                 sp = sp + p
 

@@ -17,7 +17,7 @@ n = 10
 ms = 0
 
 l = 0
-while(True):
+while (True):
     l = l + 1
     if fact[9] * l < pow(10, l):
         break

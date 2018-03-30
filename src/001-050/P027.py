@@ -33,6 +33,7 @@ def is_prime(a):
             return False
     return True
 
+
 c = 41
 b = 1
 a = 1
@@ -40,6 +41,7 @@ a = 1
 
 def eval_quad(a, b, c, x):
     return a * x * x + b * x + c
+
 
 '''
 for i in range(0,50):
@@ -51,7 +53,7 @@ max_set = []
 for b in range(-999, 999):
     for c in range(-999, 999):
         n = 0
-        while(is_prime(eval_quad(a, b, c, n))):
+        while (is_prime(eval_quad(a, b, c, n))):
             n = n + 1
         if n > max_seq:
             max_seq = n

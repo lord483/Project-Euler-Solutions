@@ -56,7 +56,7 @@ def main():
 
     i = 7
     gold = True
-    while(gold):
+    while (gold):
         i = i + 2
         if is_prime(i):
             primes.append(i)

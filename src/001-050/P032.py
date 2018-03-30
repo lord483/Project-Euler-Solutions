@@ -24,6 +24,7 @@ def is_pand(a):
             return False
     return True
 
+
 # Test
 '''
 a=int(input("num = "))

@@ -11,7 +11,7 @@ lim = 10000000000
 
 for i in range(1, 1001):
 
-    pw = i ** i
+    pw = i**i
     p = int(str(pw)[-10:])
     s = s + p
     if s > lim:

@@ -35,13 +35,13 @@ def get_primes(n):
     return primes
 
 
-def get_rem(p,n):
+def get_rem(p, n):
     '''
         Find  [ (p-1)^n + (p+1)^n ] % p^2
     '''
     rem = 2 * p
     d = p * p
-    if n%2 == 1 :
+    if n % 2 == 1:
         rem = (2 * n * p) % d
 
     return rem

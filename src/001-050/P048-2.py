@@ -30,5 +30,4 @@ for i in range(1, n + 1):
     s = s + p
     s = int(str(s)[-10:])
 
-
 print(s)

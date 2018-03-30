@@ -14,7 +14,7 @@ def solve(N):
         fc = set([n])  # Factorial chain
         cnt = 1
         m = n
-        while(True):
+        while (True):
             s = sum((factorial[int(c)] for c in str(m)))
             if s in fc:
                 break

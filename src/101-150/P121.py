@@ -17,6 +17,7 @@ and also includes the original £1 paid to play the game, so in the example give
 Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.
 '''
 
+
 def p121(turns=4):
     return 0
 

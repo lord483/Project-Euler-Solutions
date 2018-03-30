@@ -44,7 +44,7 @@ def main():
     print("Step one complete . # = ", len(primes))
     primesFiltered = [i for i in primes if i >= 56000 and hasThreeRepeating(i)]
     print("Step two complete . # = ", len(primesFiltered))
-    assert(56333 in primes)
+    assert (56333 in primes)
     #assert(56330 in primes)
 
     intSet = set([i for i in range(0, 10)])

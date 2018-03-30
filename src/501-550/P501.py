@@ -87,6 +87,7 @@ if __name__ == "__main__":
     t0 = time()
     n = 10**12
     primes = getPrimes(n // 6)
-    print("Number of primes {} , time taken : {:.2f} sec".format(len(primes), time() - t0))
+    print("Number of primes {} , time taken : {:.2f} sec".format(
+        len(primes), time() - t0))
     print(solve(n))
     print("Done , time taken : {:.2f} sec".format(time() - t0))

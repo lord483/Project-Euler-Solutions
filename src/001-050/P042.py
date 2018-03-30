@@ -1,4 +1,3 @@
-
 from math import sqrt
 
 file_name = "p042_words.txt"
@@ -28,6 +27,7 @@ def is_triangular(n):
         return True
     else:
         return False
+
 
 for s in ina:
     n = to_num(s)

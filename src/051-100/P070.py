@@ -19,7 +19,7 @@ def getPrimes(n):
         p = 2 * i + 1
         if seive[i]:
             sp = 2 * i * (i + 1)
-            while(sp < r):
+            while (sp < r):
                 seive[sp] = 0
                 sp = sp + p
 
@@ -69,7 +69,8 @@ if __name__ == "__main__":
 
     for i in range(10**3, N + 1):
         if i % (5 * 10**5) == 0:
-            print("Now doing {:,}. Time Elapsed = {:.2f} secs".format(i, time() - t0))
+            print("Now doing {:,}. Time Elapsed = {:.2f} secs".format(
+                i, time() - t0))
 
         phi = get_phi(i)
 

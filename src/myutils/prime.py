@@ -40,6 +40,7 @@ def getPrimes2(n):
             arr[i * i:n + 1:i] = False
     return arr.nonzero()[0]
 
+
 if __name__ == '__main__':
     # Test Cases
     print("Testing the getPrimes function.")
@@ -53,12 +54,14 @@ if __name__ == '__main__':
         n = 10**power
         t0 = time()
         primes = getPrimes(n)
-        print("1 - Computed for {:10d} ({}th power of 10), in {:03.5f} secs. number of primes : {:,}".format(
-            n, power, time() - t0, len(primes)))
+        print(
+            "1 - Computed for {:10d} ({}th power of 10), in {:03.5f} secs. number of primes : {:,}".
+            format(n, power, time() - t0, len(primes)))
 
         # second function
         t0 = time()
         primes2 = getPrimes2(n)
-        print("2 - Computed for {:10d} ({}th power of 10), in {:03.5f} secs. number of primes : {:,}".format(
-            n, power, time() - t0, len(primes2)))
+        print(
+            "2 - Computed for {:10d} ({}th power of 10), in {:03.5f} secs. number of primes : {:,}".
+            format(n, power, time() - t0, len(primes2)))
         # print(primes)

@@ -40,6 +40,7 @@ def check_nt(a, b):
     else:
         return False
 
+
 # Test
 '''
 print(check_nt(49,98))

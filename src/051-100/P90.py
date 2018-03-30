@@ -8,7 +8,8 @@ print(squares)
 if __name__ == "__main__":
     res = 0
     cnt = 0
-    for left, right in product(combinations(digits, 6), combinations(digits, 6)):
+    for left, right in product(
+            combinations(digits, 6), combinations(digits, 6)):
         # print(left, right)
         left_set = set(left)
         right_set = set(right)
@@ -22,8 +23,13 @@ if __name__ == "__main__":
         if 9 in right_set:
             right_set.add(6)
 
-        all_comb = set([a * 10 + b for a, b in product(list(left_set), list(right_set))])
-        all_comb.update(set([b * 10 + a for a, b in product(list(left_set), list(right_set))]))
+        all_comb = set(
+            [a * 10 + b for a, b in product(list(left_set), list(right_set))])
+        all_comb.update(
+            set([
+                b * 10 + a for a, b in product(
+                    list(left_set), list(right_set))
+            ]))
 
         # print(all_comb)
 

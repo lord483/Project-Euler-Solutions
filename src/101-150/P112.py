@@ -31,12 +31,13 @@ def is_bouncy(n):
 
     return False
 
+
 if __name__ == "__main__":
     ratio = 0
     cnt = 0
     i = 100
     # while(i < 1000):
-    while(ratio < 0.99):
+    while (ratio < 0.99):
         i = i + 1
         # print(i,is_bouncy(i))
         if is_bouncy(i):

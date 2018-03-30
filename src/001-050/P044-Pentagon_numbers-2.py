@@ -1,9 +1,7 @@
-
 from math import sqrt
 
 penta = []
 max_l = 10001
-
 '''
 def penta_num(n):
     p = (3*n - 1) *n /2
@@ -23,7 +21,7 @@ def bin_search(a, high, low=0):
     #print('in penta for ' , a , high)
     #print("penta now = ", penta)
 
-    while(True):
+    while (True):
         mid = (high + low) // 2
         #print("high = ", high, " mid = " ,mid ," low=", low)
         if penta[mid] == a:
@@ -37,6 +35,7 @@ def bin_search(a, high, low=0):
             low = mid + 1
 
     return f
+
 
 pl = 500
 
@@ -57,7 +56,8 @@ for i in range(1, max_l):
             if sq == int(sq):
                 n = (1 + sq) / 6
                 if n == int(n):
-                    print("found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ', d, " ", s, " ", n)
+                    print("found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ',
+                          d, " ", s, " ", n)
                     f = 1
                     break
     if i == pl:

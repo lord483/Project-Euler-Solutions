@@ -47,7 +47,6 @@ for i in range(1, len(p)):
 
     p2.append(m)
 
-
 # print(" Weights")
 # for l in p2:
 #     print(l)

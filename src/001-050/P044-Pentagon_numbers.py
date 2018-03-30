@@ -1,4 +1,3 @@
-
 penta = []
 max_l = 10001
 
@@ -8,12 +7,12 @@ def penta_num(n):
     p = int(p)
     return p
 
+
 penta = list(map(penta_num, range(1, max_l)))
 
 pmax = penta[-1]
 print(" First step complete : ", pmax)
 print(penta[:20])
-
 
 for i in range(max_l - 1):
     pi = penta[i]
@@ -24,9 +23,11 @@ for i in range(max_l - 1):
 
         if (d in penta):
             s = pi + pj
-            print("temp found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ', d, " ", s)
+            print("temp found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ', d,
+                  " ", s)
             if s in penta:
-                print("found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ', d, " ", s)
+                print("found : ", i + 1, ' ', pi, ' ', j + 1, ' ', pj, ' ', d,
+                      " ", s)
                 f = 1
                 break
     if i % 500 == 0:

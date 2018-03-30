@@ -38,7 +38,7 @@ def num_facts(a):
     n = 0
     i = -1
     l = int(sqrt(a))
-    while(a > 1):
+    while (a > 1):
         i = i + 1
         p = primes[i]
         if p > l:
@@ -46,7 +46,7 @@ def num_facts(a):
             a = 1
         elif a % p == 0:
             n = n + 1
-            while(a % p == 0):
+            while (a % p == 0):
                 a = a // p
     return n
 
@@ -54,7 +54,7 @@ def num_facts(a):
 def main():
     i = 3
     four = False
-    while(not four):
+    while (not four):
         i = i + 1
         p = 0
         if i % 2 == 1:
@@ -78,6 +78,7 @@ def main():
         if i%10000 == 1:
             l  = len(facts)
             print("now : " , i , "   ", len(facts))  '''
+
 
 if __name__ == "__main__":
     main()

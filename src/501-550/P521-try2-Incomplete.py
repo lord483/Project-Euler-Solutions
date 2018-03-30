@@ -4,10 +4,10 @@ def P521(n):
     V = [n // i for i in range(1, r + 1)]
     V += list(range(V[-1] - 1, 0, -1))
     S = {i: i * (i + 1) // 2 - 1 for i in V}
-##    S = [ 0 for i in range(max(V)+1)]
-# for i in V:
-##        S[i] = i*(i+1)//2-1
-##    print("s : before", S)
+    ##    S = [ 0 for i in range(max(V)+1)]
+    # for i in V:
+    ##        S[i] = i*(i+1)//2-1
+    ##    print("s : before", S)
     for p in range(2, r + 1):
         ##        print("p = ",p)
         if S[p] > S[p - 1]:  # p is prime
@@ -22,11 +22,12 @@ def P521(n):
 ##                print("S[v] :",S[v])
 ##                print("v//p :", str(v//p), " S[v//p]:", str(S[v//p]) , " sp:", sp)
                 S[v] -= p * (S[v // p] - sp)
+
+
 ##                print("S[v] after :",S[v])
 
 ##        print(" S now is ", S)
 ##    print("s : after: ", S)
     return S[n]
-
 
 print(P521(100000000))

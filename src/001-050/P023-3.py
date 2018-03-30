@@ -41,13 +41,13 @@ def abundant(a):
     else:
         return False
 
+
 #limit = 8000
 limit = 28124
 
 for i in range(1, limit):
     if abundant(i):
         ab.append(i)
-
 
 print("Total ab found = ", len(ab), " first = ", ab[0], "  last = ", ab[-1])
 

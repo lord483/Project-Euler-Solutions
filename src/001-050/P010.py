@@ -23,6 +23,7 @@ def get_primes(n):
             primes.append(i)
     return
 
+
 if __name__ == "__main__":
     t = int(input())
     for ti in range(t):

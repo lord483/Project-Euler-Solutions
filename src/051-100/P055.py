@@ -40,7 +40,7 @@ def main():
         a = i
         lych = True
         for j in range(50):
-            r = int(str(a)[::-1])    # reverse it
+            r = int(str(a)[::-1])  # reverse it
             a = a + r
             if is_pall(a):
                 lych = False

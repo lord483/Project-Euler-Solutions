@@ -5,7 +5,8 @@ from time import time
 
 
 def solve(n):
-    is_palli = lambda x: x == x[::-1]
+    def is_palli(x):
+        return x == x[::-1]
 
     res = 0
     lim = int(n**0.5) + 1
@@ -27,6 +28,7 @@ def solve(n):
                     found.add(s)
 
     return res
+
 
 if __name__ == '__main__':
     t0 = time()

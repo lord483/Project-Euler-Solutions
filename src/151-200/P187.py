@@ -32,7 +32,8 @@ if __name__ == "__main__":
     t0 = time()
 
     primes = getPrimes(10**8)
-    print("\nNumber of primes = {} , time taken = {:.2f} sec".format(len(primes), time() - t0))
+    print("\nNumber of primes = {} , time taken = {:.2f} sec".format(
+        len(primes), time() - t0))
 
     l = len(primes)
     res = 0

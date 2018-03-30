@@ -25,7 +25,7 @@ def does_intersect(xa, ya, xb, yb):
     if m == 1:
         return 0
 
-    p = c / (1 - m)   # The intersection is at (p,p)
+    p = c / (1 - m)  # The intersection is at (p,p)
 
     if p <= 0:
         return 0
@@ -81,6 +81,7 @@ def origin(x1, y1, x2, y2, x3, y3):
         return True
 
     return False
+
 
 if __name__ == "__main__":
     input_file = "./p102_triangles.txt"

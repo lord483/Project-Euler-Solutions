@@ -23,7 +23,8 @@ def d(a):
             s += (i + j)
             if i == j:
                 s -= j
-    return(s)
+    return (s)
+
 
 # test 1
 print("220 -", d(220))

@@ -21,6 +21,7 @@ def get_pytho(n):
                         pytho[s] = int(mul)
     return pytho
 
+
 if __name__ == '__main__':
 
     t = int(input("# of test cases ? :"))

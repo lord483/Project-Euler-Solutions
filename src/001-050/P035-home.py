@@ -25,22 +25,22 @@ def is_prime(a):
             return True
     return True
 
+
 for i in range(3, limit, 2):
     if is_prime(i):
         primes.append(i)
         if check_sp(i):
             sp.append(i)
 
-
 print("Number of primes found : ", len(primes))
 # print(primes)
 print("# of specials:", len(sp))
 # print(sp)
 
-
 # Check rotation
 
 spp = []
+
 #r = []
 
 
@@ -56,8 +56,8 @@ def rotation(a):
         r.append(int(n))
     return r
 
-#print("test: ", rotation(197))
 
+#print("test: ", rotation(197))
 
 for p in sp:
     f = 0

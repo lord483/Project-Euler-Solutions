@@ -23,7 +23,10 @@ tm_fd = 0
 
 c = 0  # keep track of all matching cases
 
-month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+month = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct',
+    'Nov', 'Dec'
+]
 days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 for y in range(1901, 2001):

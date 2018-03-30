@@ -63,5 +63,4 @@ for i in range(101, 1000):
             else:
                 p.append(a)
 
-
 print(p)

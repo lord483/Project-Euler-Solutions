@@ -1,4 +1,3 @@
-
 # Find a fraction that closely matches sqrt(d)
 # The numerator and denominator are the solution
 
@@ -9,7 +8,7 @@ def solve(D):
     x1, y1 = 0, 1
     x2, y2 = 1, 0
 
-    while(True):
+    while (True):
 
         x, y = x1 + x2, y1 + y2
         t = x * x - D * y * y

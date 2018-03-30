@@ -53,6 +53,7 @@ def is_prime(a):
             return True
     return True
 
+
 maxi = 7654321
 lim = int(sqrt(maxi)) + 1
 
@@ -61,7 +62,6 @@ for i in range(9, lim, 2):
         primes.append(i)
 
 print("Step one complete . # = ", len(primes))
-
 
 p = gen_pand_pc(7)
 print("all comb for 7 generated , # =", len(p))
@@ -72,6 +72,5 @@ for i in p:
         maxp = max(ii, maxp)
         # print(ii)
 print("Final = ", maxp)
-
 
 # print(gen_all(3))

@@ -28,6 +28,7 @@ def is_pand(s):
 
     return True
 
+
 '''
 s=input("Enter  Number : ")
 a=int(s)
@@ -41,7 +42,7 @@ for i in range(9999):
     s = str(i)
     f = is_pand(s)
     j = 1
-    while(f):
+    while (f):
         if len(s) == 9:
             print(i, " ", j, " ", s)
             maxp = max(maxp, int(s))

@@ -15,11 +15,11 @@ Find S(10^12) mod 10^9.
 
 from math import sqrt
 
-LIMIT = 10000000            # The Limit
-BASE = 9                    # Number of digits to keep
-primes = [2, 3]               # array of primes
+LIMIT = 10000000  # The Limit
+BASE = 9  # Number of digits to keep
+primes = [2, 3]  # array of primes
 
-sumAll = 0                  # the sum of all integers till limit
+sumAll = 0  # the sum of all integers till limit
 
 print("calculating till :", LIMIT)
 # Initialize result
@@ -77,7 +77,6 @@ for i in range(L):
                 s = (j - 1) * p
                 toReduce += s
                 #print(j , s , toReduce)
-
 
 result = sumAll - toReduce
 print("Dude your result is ", str(result)[(-1 * BASE):])

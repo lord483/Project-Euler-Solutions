@@ -22,7 +22,8 @@ def P10(n):
 
                 print(" v = ", v)
                 print("S[v] :", S[v])
-                print("v//p :", str(v // p), " S[v//p]:", str(S[v // p]), " sp:", sp)
+                print("v//p :",
+                      str(v // p), " S[v//p]:", str(S[v // p]), " sp:", sp)
                 S[v] -= p * (S[v // p] - sp)
                 print("S[v] after :", S[v])
 

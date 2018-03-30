@@ -46,22 +46,31 @@ if __name__ == "__main__":
         for k2, v2 in f2:
             l1 = (k2 % 100) * 100
             l2 = l1 + 100
-            f3 = [(k, v) for k, v in sa if (l1 < k < l2) and (v not in (3, v2))]
+            f3 = [(k, v) for k, v in sa
+                  if (l1 < k < l2) and (v not in (3, v2))]
             # print("--",k2,v2,len(f3))
             for k3, v3 in f3:
                 l1 = (k3 % 100) * 100
                 l2 = l1 + 100
-                f4 = [(k, v) for k, v in sa if (l1 < k < l2) and (v not in (3, v2, v3))]
+                f4 = [(k, v) for k, v in sa
+                      if (l1 < k < l2) and (v not in (3, v2, v3))]
                 for k4, v4 in f4:
                     l1 = (k4 % 100) * 100
                     l2 = l1 + 100
-                    f5 = [(k, v) for k, v in sa if (l1 < k < l2) and (v not in (3, v2, v3, v4))]
+                    f5 = [(k, v) for k, v in sa
+                          if (l1 < k < l2) and (v not in (3, v2, v3, v4))]
                     for k5, v5 in f5:
                         l1 = (k5 % 100) * 100
                         l2 = l1 + 100
-                        f6 = [(k, v) for k, v in sa if (l1 < k < l2) and (v not in (3, v2, v3, v4, v5))]
+                        f6 = [
+                            (k, v) for k, v in sa
+                            if (l1 < k < l2) and (v not in (3, v2, v3, v4, v5))
+                        ]
                         for k6, v6 in f6:
                             if k6 % 100 == i // 100:
-                                print("Result : ", sum([i, k2, k3, k4, k5, k6]))
-                                print("i:{}, k2:{}, v2:{}, k3:{}, v3:{}, k4:{}, v4:{}, k5:{}, v5:{}, k6:{}, v6:{},".format(
-                                    i, k2, v2, k3, v3, k4, v4, k5, v5, k6, v6))
+                                print("Result : ", sum([i, k2, k3, k4, k5,
+                                                        k6]))
+                                print(
+                                    "i:{}, k2:{}, v2:{}, k3:{}, v3:{}, k4:{}, v4:{}, k5:{}, v5:{}, k6:{}, v6:{},".
+                                    format(i, k2, v2, k3, v3, k4, v4, k5, v5,
+                                           k6, v6))

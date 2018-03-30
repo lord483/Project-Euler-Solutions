@@ -1,4 +1,3 @@
-
 def solve(n):
     mem = [0 for _ in range(n + 1)]
     mem[0] = 1

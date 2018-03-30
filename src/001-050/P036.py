@@ -16,7 +16,8 @@ def toBin(a):
         b = str(r) + b
         a = int(a / 2)
     b = str(a) + b
-    return(int(b))
+    return (int(b))
+
 
 '''
 a=int(input(" Test Number : "))

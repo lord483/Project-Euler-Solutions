@@ -11,7 +11,6 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 
 
 m1 = set(range(0, 10))
 print(m1)
-
 '''
 m2 = m1 - {0}
 
@@ -51,7 +50,10 @@ for e1 in m1:
                                         count = count + 1
                                         if count == 1000000:
                                             s = ''
-                                            s = str(e1) + str(e2) + str(e3) + str(e4) + str(e5) + str(e6) + str(e7) + str(e8) + str(e9) + str(e10)
+                                            s = str(e1) + str(e2) + str(
+                                                e3) + str(e4) + str(e5) + str(
+                                                    e6) + str(e7) + str(
+                                                        e8) + str(e9) + str(e10)
                                             print(s)
                                             break
 

@@ -60,7 +60,6 @@ for num in range(1, (n * n) + 1):
     for row in a:
         print(row)
     print(" ") '''
-
 '''
 for row in a:
     print(row) '''

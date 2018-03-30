@@ -3,18 +3,31 @@
 '''
 from collections import Counter
 
-value = {"A": 14, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
-         "7": 7, "8": 8, "9": 9, "T": 10, "J": 11, "Q": 12, "K": 13}
+value = {
+    "A": 14,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "T": 10,
+    "J": 11,
+    "Q": 12,
+    "K": 13
+}
 
 
 class hand:
-
     def __init__(self, deck):
         self.deck = self.sorted_deck(deck)
         self.high_card = self.deck[-1][0]
         self.flush, self.straight_flush, self.royal_flush = self.check_flush()
         self.four = self.check_four()
-        self.one_pair, self.two_pair, self.three, self.full_house = self.check_full_house()
+        self.one_pair, self.two_pair, self.three, self.full_house = self.check_full_house(
+        )
         self.straight = self.check_straight()
 
     def sorted_deck(self, deck):

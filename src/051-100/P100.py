@@ -17,7 +17,7 @@
 a = 15
 b = 6
 
-while(a + b < 10**12):
+while (a + b < 10**12):
     a_next = 5 * a + 2 * b - 2
     b_next = 2 * a + b - 1
 

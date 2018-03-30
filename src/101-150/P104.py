@@ -1,4 +1,3 @@
-from time import time
 import math
 
 ratio = (math.sqrt(5) + 1) / 2
@@ -19,12 +18,11 @@ def solve():
     k = 2
     n = 0
     tail = 10**9
-    t0 = time()
 
     m, m1 = 100, 100
     base = 0
 
-    while(True):
+    while (True):
         k += 1
         n = a + b
 
@@ -49,6 +47,7 @@ def solve():
         a, b = b, n
 
     return k
+
 
 print(solve())
 # print(n)

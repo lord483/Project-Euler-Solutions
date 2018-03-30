@@ -28,7 +28,6 @@ for i in range(9, LIMIT, 2):
 #print("Loop =", loop , " ",sl)
 # print(primes)
 print("all Primes computed , count = ", len(primes))
-
 '''
 def permutation_list(p):
     li = []

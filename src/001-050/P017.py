@@ -13,8 +13,14 @@ words = []
 for i in range(0, 1001):
     words.append(' ')
 
-words[0:10] = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-words[11:20] = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+words[0:10] = [
+    'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+    'nine', 'ten'
+]
+words[11:20] = [
+    'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
+    'seventeen', 'eighteen', 'nineteen', 'twenty'
+]
 # print(words[0:21])
 
 cent = 'hundred'
@@ -50,15 +56,16 @@ for i in range(101, 1000):
         w = cc
     words[i] = w
 
-
 # Final calculation
+
 
 def len_w(w):
     n = 0
     for c in w:
         if c not in [' ', '-']:
             n = n + 1
-    return(n)
+    return (n)
+
 
 res = 0
 
@@ -67,10 +74,9 @@ for i in range(1, 1001):
 
 print("result =", res)
 
-
 print("all complete. Lets test.")
 
 ip = int(input("eneter a number : "))
-while(ip != 0):
+while (ip != 0):
     print("word = ", words[ip], "  lenght=", len_w(words[ip]))
     ip = int(input("eneter a number : "))

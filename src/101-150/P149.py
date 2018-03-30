@@ -44,6 +44,7 @@ def solve(mat):
 
     return res
 
+
 if __name__ == "__main__":
     t0 = time()
     a = Lagged_Fibonacci_Generator(4000000)

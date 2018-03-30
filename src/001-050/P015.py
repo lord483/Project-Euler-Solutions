@@ -1,5 +1,4 @@
 # -*- coding: cp1252 -*-
-
 '''
 Problem 15
 
@@ -50,6 +49,7 @@ def nxt(a):
     if y > 0:
         d = down(a)
     return r + d
+
 
 SIZE = int(input("Enter teh size : "))
 s = (0, SIZE)

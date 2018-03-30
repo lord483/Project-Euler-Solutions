@@ -1,4 +1,3 @@
-
 def gen_pand(a):
     r = []
     if a == 1:
@@ -11,6 +10,7 @@ def gen_pand(a):
                 r.append(s[:i] + c + s[i:])
         print(a, " Len = ", len(r))
         return r
+
 
 x = []
 x = gen_pand(9)

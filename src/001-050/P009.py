@@ -15,6 +15,7 @@ def main_process(n):
                     res = mul
     return res
 
+
 if __name__ == '__main__':
     t = int(input("Number of test cases : "))
     for ti in range(t):

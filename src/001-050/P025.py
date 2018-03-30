@@ -26,7 +26,7 @@ f1 = 1
 f2 = 1
 n = 2
 
-while(True):
+while (True):
     n = n + 1
     fn = f1 + f2
     f1 = f2

@@ -28,6 +28,7 @@ def solve(N):
 
     return res_cnt
 
+
 if __name__ == "__main__":
     t0 = time()
     print(solve(10**8))

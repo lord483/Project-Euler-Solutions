@@ -20,6 +20,7 @@ def sum_digit(a):
         s = s + pow(i, 5)
     return s
 
+
 res = 0
 num_list = []
 

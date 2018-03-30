@@ -24,7 +24,6 @@ for i in ip:
 
 # f.close()
 
-
 f2 = open("p022_names_sorted.txt", 'w')
 
 f2.writelines('\n'.join(r))

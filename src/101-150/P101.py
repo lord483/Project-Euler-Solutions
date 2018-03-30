@@ -12,6 +12,7 @@ def eval_p(p, n):
         res.append(eval_t(p, i))
     return res
 
+
 #op = [(-1)**(i+2) for i in range(10) ]
 p3 = [0, 0, 0, 1]
 op = p3

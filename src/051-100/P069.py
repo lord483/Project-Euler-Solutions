@@ -19,7 +19,7 @@ def getPrimes(n):
         p = 2 * i + 1
         if seive[i]:
             sp = 2 * i * (i + 1)
-            while(sp < r):
+            while (sp < r):
                 seive[sp] = 0
                 sp = sp + p
 

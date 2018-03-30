@@ -16,6 +16,7 @@ def isPrime(a):
 
     return True
 
+
 '''
 a=input("Enter a num :")
 print isPrime(a)

@@ -39,7 +39,8 @@ def is_prime(a):
             return True
     return True
 
-while(limit < 11):
+
+while (limit < 11):
 
     i = i + 2
 
@@ -58,8 +59,8 @@ while(limit < 11):
             if check_sp(s):
                 sp.append(i)
                 limit = limit + 1
-                print("#", limit, " - ", i, "Number of primes found : ", len(primes))
-
+                print("#", limit, " - ", i, "Number of primes found : ",
+                      len(primes))
 
 print("Number of primes found : ", len(primes))
 # print(primes)

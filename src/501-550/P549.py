@@ -17,6 +17,7 @@ import math
 from utils import prime
 
 limit = 100
+
 # limit = 100000000
 
 
@@ -60,6 +61,7 @@ def solve(n):
             res.append(r)
 
         return max(res)
+
 
 if __name__ == "__main__":
     global plist

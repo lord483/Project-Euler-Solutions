@@ -1,6 +1,6 @@
-
 from time import time
 all_num = set([i for i in range(1, 10)])
+
 
 def solve_sudoku(ip):
     blanks = []
@@ -34,6 +34,7 @@ def solve_sudoku(ip):
                 index -= 1
 
     return ip
+
 
 def check(ip, x, y):
     s = set([ip[i][y] for i in range(9) if i != x])
@@ -74,7 +75,8 @@ if __name__ == "__main__":
         if cnt == 10:
             solution = solve_sudoku(ip)
             a, b, c = solution[0][:3]
-            print("\n Solved {} , time taken {:.3f} secs".format(header, time() - t0))
+            print("\n Solved {} , time taken {:.3f} secs".format(
+                header, time() - t0))
             # Print solution
             for row in solution:
                 print(row)

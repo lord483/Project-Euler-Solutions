@@ -21,13 +21,14 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 def chain(x):
     c = 1
     n = x
-    while(n > 1):
+    while (n > 1):
         c = c + 1
         if n % 2 == 0:
             n = n / 2
         else:
             n = 3 * n + 1
     return c
+
 
 max_len = 0
 max_int = 0
