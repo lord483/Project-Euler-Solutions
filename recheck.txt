@@ -6,3 +6,10 @@ P078 - Coin Change, Can also be solved by Euler generating function for partitio
 P096 - Backtrack - Sudoku
 P100 - Dia-phantine equation
 
+TODO
+P203 - Redo . Committed to other repo .
+
+TODO P169 
+TODO P153
+TODO P162
+TODO P198
