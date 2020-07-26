@@ -1,45 +1,52 @@
-'''
-Sums of Digit Factorials
-Problem 254
-'''
 from time import time
 
 
-def digit_sum(x):
-    return sum((int(c) for c in str(x)))
+
+new_lst = [0]
+user_input = input("Enter query: ")
+start_time = time()
 
 
-def SF(n):
-    digits = [int(c) for c in str(n)]
-    f = 0
-    for d in digits:
-        f += fact[d]
-    return digit_sum(f)
+def fact_calc():
+    fact = 1
+    for y in range(9):
+        factor = fact * y
+        fact += factor
+        new_lst.append(fact)
 
 
-def p254(limit):
-    g = [0 for i in range(limit)]
-
-    i = 1
-    while(not all(g)):
-        sf = SF(i)
-        if sf <= limit:
-            if g[sf - 1] == 0:
-                print(sf, i)
-                g[sf - 1] = i
-        i += 1
-
-    return sum((digit_sum(x) for x in g))
+fact_calc()
 
 
-if __name__ == "__main__":
-    t0 = time()
-    fact = [1 for _ in range(10)]
-    for i in range(2, 10):
-        fact[i] = fact[i - 1] * i
+def sf(num):
+    fact_digit_sum = 0
 
-    res = p254(150)
+    for number in str(num):
+        d = int(number)
+        fact_digit = new_lst[d]
+        fact_digit_sum += fact_digit
+    return fact_digit_sum
 
-    print("Result ", res)
 
-    print("Time taken {:.2f} secs".format(time() - t0))
+def f_sum(f):
+    d_sum = 0
+    for digit in str(f):
+        digit = int(digit)
+        fact_of_digit = digit
+        d_sum += fact_of_digit
+    return d_sum
+
+
+def g(i):
+    param = 10 ** 18
+    for _ in range(1, param):
+        f_s = f_sum(sf(str(_)))
+        if int(i) == f_s:
+            return _
+        else:
+            continue
+
+
+print(g(user_input))
+end_time = time()
+print(end_time - start_time)
