@@ -6,8 +6,8 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 find the sum of the even-valued terms. '''
 
-f1 = 1
-f2 = 2
+f1 = 0
+f2 = 1
 sum_even = 0
 
 LIMIT = 4000000
